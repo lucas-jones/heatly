@@ -1,0 +1,26 @@
+{
+	"name": "heatly",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "bunx --bun  vite --host",
+		"build": "vite build",
+		"lint": "prettier --write \"**/*.{ts,tsx,css,html,json}\"",
+		"preview": "vite preview --port 8080",
+		"generate": "bun run scripts/generate.ts 2024-08-20 --parquet scripts/data/data.parquet --metadata scripts/data/metadata.csv --pretty --out ./public/test.json"
+	},
+	"dependencies": {
+		"h3-js": "^4.2.1",
+		"postprocessing": "^6.37.7",
+		"three": "^0.179.1"
+	},
+	"devDependencies": {
+		"@evan/duckdb": "^0.1.5",
+		"@types/three": "^0.179.0",
+		"@types/geojson": "^7946.0.16",
+		"prettier": "3.6.2",
+		"rolldown-vite": "^7.0.10",
+		"typescript": "~5.8.3"
+	}
+}
